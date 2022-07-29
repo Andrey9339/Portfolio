@@ -1,8 +1,9 @@
 .resume {
     padding-top: 120px;
-    background-color: #b1876b;
+    background-color: #a4a9cf;
     &__title {
         position: relative;
+        z-index: 0;
         text-align: center;
         @include before_circle;
         &:before {
