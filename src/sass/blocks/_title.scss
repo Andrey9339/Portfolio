@@ -23,4 +23,18 @@
     &__white {
         color: #ffffff;
     }
+    &__section-title {
+        position: relative;
+        z-index: 0;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__section-subtitle {
+        text-align: center;
+    }
 }
