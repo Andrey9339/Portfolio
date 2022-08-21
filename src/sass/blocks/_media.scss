@@ -18,7 +18,8 @@
     }
     .skills {
         &__wrapper {
-            grid-template-columns: repeat(3,305px);
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: space-between;
         }
         &__rating {
             grid-template: repeat(2,minmax(70px,auto))/repeat(2,321px);
@@ -34,6 +35,13 @@
                     top: -16%;
                 }
             }
+        }
+    }
+    .contacts {
+        padding: 63px 0 90px 0;
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: 325px 585px;
         }
     }
 }
@@ -60,12 +68,31 @@
     }
     .resume {
         &__wrapper {
-            grid-template-columns: repeat(2,360px);
+            grid-template-columns: repeat(auto-fit,270px);
         }
     }
     .skills {
         &__rating {
             justify-content: space-around;
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 44px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 245px 585px;
+            justify-content: center;
+            justify-items: center;
         }
     }
 }
@@ -100,8 +127,21 @@
     }
     .skills {
         &__wrapper {
-            grid-template-columns: repeat(2,295px);
-            padding: 0px 60px;
+            padding: 0 20px;
+        }
+    }
+    .price {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: repeat(auto-fit, 350px);
+        }
+    }
+    .contacts {
+        &__wrapper {
+            display: block;
+        }
+        &__photo {
+            display: none;
         }
     }
 }
@@ -145,11 +185,45 @@
     }
     .skills {
         &__wrapper {
-            grid-template-columns: 295px;
-            padding: 0 122px;
+            padding: 0;
+            justify-content: center;
+            gap: 20px;
         }
         &__rating {
             grid-template: 52px / 321px;
+        }
+    }
+    .portfolio {
+        padding-top: 40px;
+    }
+    .price {
+        padding-top: 40px;
+        &__wrapper {
+            margin-top: 20px;
+            justify-content: center;
+        }
+    }
+    .contacts {
+        &__title {
+            text-align: center;
+            &:before {
+                left: 215px;
+            }
+        }
+        &__subtitle {
+            text-align: center;
+        }
+        &__descr {
+            .divider {
+                margin-left: 237px;
+            }
+        }
+        &__form {
+            grid-template-columns: repeat(2,240px);
+            justify-content: space-around;
+        }
+        &__social, &__text {
+            text-align: center;
         }
     }
 }
@@ -202,8 +276,7 @@
     }
     .skills {
         &__wrapper {
-            grid-template-columns: 270px;
-            padding: 0 50px;
+            margin-top: 20px;    
         }
         &__rating {
             margin-top: 40px;
@@ -211,6 +284,53 @@
             &-line {
                 width: 300px;
             }
+        }
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 295px);
+        }
+    }
+    .contacts {
+        &__title {
+            text-align: inherit;
+            &:before {
+                left: 0;
+            }
+        }
+        &__subtitle {
+            text-align: inherit;
+        }
+        &__descr {
+            .divider {
+                margin-left: 0;
+            }
+        }
+        &__social, &__text {
+            text-align: inherit;
+        }
+        &__form {
+            grid-template: 45px 45px 190px minmax(45px, auto) / 1fr;
+        }
+        &__textarea {
+            grid-column: unset;
+            width: 100%;
+        }
+        &__triggers {
+            grid-column: unset;
+            grid-template-columns: 1fr;
+            column-gap: unset;
+            row-gap: 20px;
+        }
+        &__btn {
+            order: 2;
+            max-width: 220px;
+            margin: 0 auto;
+        }
+        &__policy {
+            width: 180px;
+            margin: 0 auto;
+            line-height: 18px;
         }
     }
 }
